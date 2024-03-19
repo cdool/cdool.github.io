@@ -13,6 +13,7 @@ p {
   color: white;
   margin: 0 auto;
   line-height: 17px;
+  spacing
 }
 
 
@@ -129,9 +130,13 @@ nav a:hover {
 
 main {
   grid-area: main;
-
+  
 }
 
+main p {
+  width: 90%;
+  margin-left: 5%;
+}
 #sidebar {
   grid-area: sidebar;
 
