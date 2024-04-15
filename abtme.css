@@ -70,27 +70,27 @@ h2 {
 .container {
   display: grid;
   height: 150vh;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1.5fr 1.4fr 1fr 8fr 8fr 2fr;
   grid-gap: 25px;
-
+  
   grid-template-areas:
     "header header header header"
     "nav nav nav nav"
-    "sidebar main main content3"
-    "sidebar main main content3"
-    "sidebar content1 content2 content3"
+    "content1 content1 content2 content2"
+    "content3 content3 content4 content4"
     "footer footer footer footer";
 }
 
-
+spacer {
+  grid-area: spacer;
+}
 
 header {
   grid-area: header;
 }
 
 nav {
-  background-color: hotpink;
   grid-area: nav;
 
   background-color: #1c1c1c;
@@ -131,26 +131,21 @@ nav a:hover {
 
 main {
   grid-area: main;
-  
+
 }
 
 main p {
   width: 90%;
   margin-left: 5%;
 }
-#sidebar {
+#content4 {
   grid-area: sidebar;
-  
+
 }
 
 #content1 {
   grid-area: content1;
-}
 
-#content1 img {
-  height:50%;
-  /*when 2 images on page margin-left: 20%;*/
-  /*whem 1 image on page*/margin-left: 90%;
 }
 
 #content2 {
@@ -165,6 +160,11 @@ main p {
 
 #content3 {
   grid-area: content3;
+}
+
+#content4 {
+  background-color: lightgreen;
+  grid-area: content2;
 }
 
 footer {
@@ -185,6 +185,11 @@ footer img {
   background-color: white;
 }
 
+#frc{
+  text-align: center;
+  margin-left:20%;
+}
+
 @media only screen and (max-width:768px) {
   .container {
     height: 100%;
@@ -203,7 +208,10 @@ footer img {
 }
 
 
-
+.content1 img {
+  width: 100%;
+  height: 100%;
+}
 
 .content2 img {
   width: 100%;
